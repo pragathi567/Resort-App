@@ -14,9 +14,8 @@ function App() {
     <Navbar/>
       <Routes>
          <Route path='/' exact element={<Home/>}/>
-         <Route path='/rooms' exact element={<Rooms/>}>
-             <Route slug element={<SingleRoom/>}/>
-         </Route>
+         <Route path='/rooms' exact element={<Rooms/>}/>
+          <Route path='/rooms/:slug' element={<SingleRoom/>}/>
          <Route path='*' element={<PageNotFound/>}/>
       </Routes>
      </Router>
